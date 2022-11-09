@@ -20,7 +20,8 @@ public class CrearJuegoUseCase extends UseCaseForCommand<CrearJuegoCommand> {
                                 new MontoRequerido( command.getMontoRequerido())
                         );
                         return juego.getUncommittedChanges();
-                });
+                })
+                .log();
     }
 
 

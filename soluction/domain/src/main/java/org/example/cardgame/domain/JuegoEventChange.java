@@ -13,6 +13,7 @@ public class JuegoEventChange extends EventChange {
             juego.montoRequerido = event.getMontoRequerido();
             juego.jugadorPrincipal = event.getJugadorPrincipal();
         });
+
         apply((JugadorAgregado event) -> {
             juego.jugadores.put(event.getJugadorId(),
                     new Jugador(event.getJugadorId(), event.getAlias())
